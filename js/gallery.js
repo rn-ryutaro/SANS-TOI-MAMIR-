@@ -29,7 +29,7 @@
     var g = items[current];
     var apply = function () {
       img.src = g.file;
-      img.alt = g.caption || g.category || '';
+      img.alt = 'サントワマミーの' + (g.caption || g.category || '写真');
       count.textContent = pad(current + 1) + ' / ' + pad(items.length);
       cat.textContent = g.category || '';
       ja.textContent = g.caption || '';

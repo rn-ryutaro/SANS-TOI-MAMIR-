@@ -126,7 +126,7 @@
     (window.MENU || []).forEach(function (cat) {
       var sec = el('section', 'menu-cat' + (cat.featured ? ' menu-cat--featured' : ''));
       var head = el('div', 'menu-cat__head');
-      head.appendChild(el('h2', 'menu-cat__en', cat.en));
+      head.appendChild(el('h3', 'menu-cat__en', cat.en));
       head.appendChild(el('span', 'menu-cat__ja', cat.ja));
       head.appendChild(el('span', 'menu-cat__rule'));
       sec.appendChild(head);
@@ -184,7 +184,7 @@
       var img = el('img');
       img.src = g.file;
       if (g.pos) img.style.objectPosition = g.pos;
-      img.alt = g.caption || g.category || '';
+      img.alt = 'サントワマミーの' + (g.caption || g.category || '写真');
       img.loading = i < 2 ? 'eager' : 'lazy';
       img.decoding = 'async';
       fig.appendChild(img);
