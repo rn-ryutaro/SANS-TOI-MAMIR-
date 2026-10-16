@@ -27,7 +27,7 @@ window.SITE = {
                  //   例: "https://www.instagram.com/xxxxx/"  空欄の間はボタンが無効（押せない）表示になります
 
   /* CONTACTページに表示する電話番号（ACCESS・TOPには表示されません） */
-  contactTel: "095-822-8788",
+  contactTel: "080-5266-6943",
 
   /* Google Maps のURL。空欄なら住所から自動で作成します。 */
   mapUrl:  ""
@@ -53,7 +53,7 @@ window.MENU = [
     ja: "飲み放題",
     featured: true,
     items: [
-      { name: "飲み放題", price: "3,000円", tag: "歌い放題付き",
+      { name: "飲み放題 2時間", price: "3,000円", tag: "歌い放題付き",
         note: "飲み放題をご利用の場合は、カラオケも歌い放題です。" }
     ]
   },

@@ -627,3 +627,22 @@ html.is-locked, html.is-locked body { overflow: hidden; }
   .gallery__item:nth-child(7n+6) .media,
   .gallery__item:nth-child(7n+7) .media { aspect-ratio: 16 / 9; }
 }
+
+
+/* ---------- CONTACT：LINEボタン（アイコン付き／2026-10） ---------- */
+.contact-line__btn--line { gap: 12px; min-height: 60px; }
+.contact-line__icon { flex: none; width: 26px; height: 26px; color: var(--c-gold); transition: color .4s var(--ease); }
+.contact-line__btn--line:hover .contact-line__icon { color: #f3dcae; }
+@media (max-width: 640px) {
+  .contact-line__btn--line { min-height: 60px; font-size: 15px; }
+}
+.contact-line__btn--line { padding: 0 14px; gap: 10px; letter-spacing: .04em; white-space: nowrap; }
+.contact-line__btn--line .btn__arrow { width: 22px; flex: none; }
+.contact-line__btn--line:hover .btn__arrow { width: 30px; }
+@media (max-width: 360px) {
+  .contact-line__btn--line { font-size: 14px; letter-spacing: 0; gap: 8px; }
+  .contact-line__icon { width: 22px; height: 22px; }
+}
+
+/* ---------- CONTACT：Instagramボタン（LINEボタンとそろえる／2026-10） ---------- */
+.contact-line__btn--ig .contact-line__icon { width: 24px; height: 24px; }
