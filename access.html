@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>アクセス・地図｜サントワマミー（長崎市本石灰町・思案橋のスナック）</title>
-  <meta name="description" content="長崎市・思案橋のスナック「サントワマミー」へのアクセス。所在地は〒850-0901 長崎県長崎市本石灰町4-13。Googleマップ（航空写真）で場所をご確認いただけます。">
+  <meta name="description" content="長崎市・思案橋のスナック「サントワマミー」へのアクセス。所在地は〒850-0901 長崎県長崎市本石灰町4-13。営業時間17:00〜24:00、定休日は日曜日（祝日は不定休）。Googleマップ（航空写真）で場所をご確認いただけます。">
   <link rel="canonical" href="https://rn-lemon.vercel.app/access.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="サントワマミー（SANS TOI MAMIE）">
   <meta property="og:title" content="アクセス・地図｜サントワマミー">
-  <meta property="og:description" content="長崎市・思案橋のスナック「サントワマミー」へのアクセス。所在地は〒850-0901 長崎県長崎市本石灰町4-13。Googleマップ（航空写真）で場所をご確認いただけます。">
+  <meta property="og:description" content="長崎市・思案橋のスナック「サントワマミー」へのアクセス。所在地は〒850-0901 長崎県長崎市本石灰町4-13。営業時間17:00〜24:00、定休日は日曜日（祝日は不定休）。Googleマップ（航空写真）で場所をご確認いただけます。">
   <meta property="og:url" content="https://rn-lemon.vercel.app/access.html">
   <meta property="og:image" content="https://rn-lemon.vercel.app/images/hero.jpg">
   <meta property="og:image:width" content="1536">
@@ -18,7 +18,10 @@
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0a0908">
+  <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,12 +66,12 @@
       <div class="access__info">
         <p class="access__name" data-site="name">サントワマミー</p>
         <p class="access__name-en" data-site="nameEn">SANS TOI MAMIE</p>
-        <!-- 営業時間・定休日・TEL は js/config.js に入力すると表示されます -->
+        <!-- 営業時間・定休日・TEL は js/config.js の hours / holiday / tel で変更できます -->
         <dl class="info-list">
           <div class="info-list__row"><dt>ADDRESS</dt><dd>〒<span data-site="zip">850-0901</span><br><span data-site="address">長崎県長崎市本石灰町4-13</span></dd></div>
           <div class="info-list__row"><dt>AREA</dt><dd data-site="area">長崎・思案橋</dd></div>
-          <div class="info-list__row" data-site-if="hours"><dt>OPEN</dt><dd data-site="hours"></dd></div>
-          <div class="info-list__row" data-site-if="holiday"><dt>CLOSED</dt><dd data-site="holiday"></dd></div>
+          <div class="info-list__row" data-site-if="hours"><dt>OPEN</dt><dd data-site="hours">17:00〜24:00</dd></div>
+          <div class="info-list__row" data-site-if="holiday"><dt>CLOSED</dt><dd data-site="holiday">日曜日（祝日は不定休）</dd></div>
           <div class="info-list__row" data-site-if="tel"><dt>TEL</dt><dd><a href="#" data-site-href="tel" data-site="tel"></a></dd></div>
         </dl>
         <p class="access__btn"><a class="btn" href="#" data-site-href="map" target="_blank" rel="noopener">GOOGLE MAPS <span class="btn__arrow"></span></a></p>

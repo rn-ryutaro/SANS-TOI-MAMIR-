@@ -17,9 +17,9 @@ window.SITE = {
   address: "長崎県長崎市本石灰町4-13",
 
   /* ↓ 確認できたら入力してください。空欄のままなら非表示になります。 */
-  tel:     "",   // 例: "095-000-0000"
-  hours:   "",   // 例: "20:00 – 翌1:00"
-  holiday: "",   // 例: "日曜日"
+  tel:     "",   // ACCESSページにも電話番号を表示する場合のみ入力（CONTACTの番号は下の contactTel）
+  hours:   "17:00〜24:00",   // 営業時間（ACCESSページに表示）
+  holiday: "日曜日（祝日は不定休）",   // 定休日（ACCESSページに表示）
   line:    "https://lin.ee/uEt7tqSk",   // ★ CONTACTページ「LINEでお問い合わせ」ボタンのリンク先（公式LINEのURL）
                  //   例: "https://lin.ee/xxxxxxx"  空欄の間はボタンが無効（押せない）表示になります
 
@@ -97,11 +97,11 @@ window.MENU_NOTES = [];
 window.GALLERY = [
   /* 並び：店内の全景 → 夜の外観 → 入口 → カウンター → ソファ席 → テーブル席 → カウンター席
      pos … 枠の中で写真のどこを中心に見せるか（省略可。例 "50% 50%"） */
-  { file: "images/9441D16D-2AAB-4BF1-B1D3-4B3610492E88.jpg", category: "Interior", caption: "店内",           pos: "50% 70%" },
-  { file: "images/gallery-photo-08.jpg", category: "Exterior", caption: "夜の外観",         pos: "50% 50%" },
-  { file: "images/gallery-photo-03.jpg", category: "Entrance", caption: "入口",            pos: "50% 45%" },
-  { file: "images/gallery-photo-02.jpg", category: "Counter",  caption: "カウンターとボトル棚", pos: "50% 50%" },
-  { file: "images/gallery-photo-09.jpg", category: "Sofa",     caption: "ソファ席",         pos: "50% 50%" },
-  { file: "images/gallery-photo-05.jpg", category: "Seats",    caption: "テーブル席",        pos: "50% 55%" },
-  { file: "images/gallery-photo-07.jpg", category: "Counter",  caption: "カウンター席",      pos: "50% 55%" }
+  { file: "images/9441D16D-2AAB-4BF1-B1D3-4B3610492E88.webp", category: "Interior", caption: "店内",           pos: "50% 70%" },
+  { file: "images/gallery-photo-08.webp", category: "Exterior", caption: "夜の外観",         pos: "50% 50%" },
+  { file: "images/gallery-photo-03.webp", category: "Entrance", caption: "入口",            pos: "50% 45%" },
+  { file: "images/gallery-photo-02.webp", category: "Counter",  caption: "カウンターとボトル棚", pos: "50% 50%" },
+  { file: "images/gallery-photo-09.webp", category: "Sofa",     caption: "ソファ席",         pos: "50% 50%" },
+  { file: "images/gallery-photo-05.webp", category: "Seats",    caption: "テーブル席",        pos: "50% 55%" },
+  { file: "images/gallery-photo-07.webp", category: "Counter",  caption: "カウンター席",      pos: "50% 55%" }
 ];

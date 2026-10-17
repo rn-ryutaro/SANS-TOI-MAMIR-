@@ -20,15 +20,20 @@
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0a0908">
+  <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Sans+JP:wght@300;400&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="images/hero.jpg">
+  <link rel="preload" as="image" href="images/hero.webp" type="image/webp">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/top.css">
-  <!-- 店舗情報の構造化データ（画面に表示している情報のみ） -->
+  <!-- 店舗情報の構造化データ（画面に表示している情報のみ）
+       営業時間 17:00〜24:00：深夜0時に閉店するため closes は "00:00"（開店時刻より前の時刻＝翌日の0時＝24:00）。
+       定休日 日曜日：opens / closes とも "00:00"（終日休業）。祝日は不定休のため登録していません。 -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,6 +52,20 @@
       "streetAddress": "本石灰町4-13",
       "addressCountry": "JP"
     },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "17:00",
+        "closes": "00:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "00:00",
+        "closes": "00:00"
+      }
+    ],
     "sameAs": [
       "https://www.instagram.com/santowamami2/",
       "https://lin.ee/uEt7tqSk"
@@ -88,8 +107,8 @@
     <!-- ===== HERO ===== -->
     <section class="hero" aria-label="SANS TOI MAMIE">
       <div class="hero__media">
-        <!-- 写真は images/hero.jpg を差し替えるだけで変更できます -->
-        <img class="hero__img" src="images/hero.jpg" alt="" fetchpriority="high" decoding="async">
+        <!-- 写真は images/hero.webp を差し替えるだけで変更できます（SNS共有用の画像は images/hero.jpg） -->
+        <img class="hero__img" src="images/hero.webp" alt="サントワマミーの店内（カウンターとボトル棚）" fetchpriority="high" decoding="async">
       </div>
       <div class="hero__overlay" aria-hidden="true"></div>
 
@@ -129,11 +148,11 @@
     <section class="t-about" id="about">
       <div class="t-about__grid">
         <a class="photo t-about__main" href="gallery.html" data-reveal="photo">
-          <div class="media"><img src="images/top-about-main.jpg" alt="サントワマミーのカウンターとボトル棚" loading="lazy" decoding="async"></div>
+          <div class="media"><img src="images/top-about-main.webp" alt="サントワマミーのカウンターとボトル棚" loading="lazy" decoding="async"></div>
           <span class="photo__label">VIEW</span>
         </a>
         <a class="photo t-about__sub" href="gallery.html" data-reveal="photo" style="--rd:.2s">
-          <div class="media"><img src="images/top-about-sub.jpg" alt="サントワマミーの店内" loading="lazy" decoding="async"></div>
+          <div class="media"><img src="images/top-about-sub.webp" alt="サントワマミーの店内" loading="lazy" decoding="async"></div>
           <span class="photo__label">VIEW</span>
         </a>
         <div class="t-about__body">
@@ -166,7 +185,7 @@
     <!-- ===== MENU（料金） ===== -->
     <section class="t-menu" id="menu">
       <div class="t-menu__bg media" data-reveal="fade">
-        <img src="images/gallery07.jpg" alt="" loading="lazy" decoding="async">
+        <img src="images/gallery07.webp" alt="" loading="lazy" decoding="async">
       </div>
       <div class="t-menu__inner">
         <div class="sec-title sec-title--center">
@@ -176,6 +195,17 @@
         </div>
         <!-- 料金の内容は js/config.js の MENU で変更できます -->
         <p class="t-menu__lead" data-reveal style="--rd:.25s">サントワマミーの料金とシステムのご案内です。</p>
+        <!-- ===== 来店特典（ホームページ・Instagramを見た方限定） ===== -->
+        <aside class="t-campaign" data-reveal style="--rd:.28s" aria-labelledby="campaign-title">
+          <p class="t-campaign__label" aria-hidden="true">CAMPAIGN</p>
+          <h3 class="t-campaign__title" id="campaign-title">
+            <span class="t-campaign__title-sub"><span class="t-campaign__nb">ホームページ・Instagramを</span><span class="t-campaign__nb">見た方限定！</span></span>
+            <span class="t-campaign__title-main">ワンドリンク無料！</span>
+          </h3>
+          <span class="t-campaign__rule" aria-hidden="true"></span>
+          <p class="t-campaign__text">ご来店の際にスタッフへ<br class="pc-only">『ホームページ（またはInstagram）を見て来ました』とお伝えください。<br class="pc-only">ワンドリンクを無料でサービスいたします。</p>
+          <p class="t-campaign__note">※ おひとり様1回限り</p>
+        </aside>
         <div class="t-menu__board" data-reveal style="--rd:.3s">
           <div class="menu-board" data-menu></div>
           <ul class="menu-notes" data-menu-notes></ul>
