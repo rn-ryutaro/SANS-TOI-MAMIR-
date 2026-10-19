@@ -565,3 +565,30 @@ section.intro, .t-about, .t-menu, .t-gallery, .t-access, .t-contact { position: 
 @media (max-width: 359px) { /* 幅の狭いスマホ（320px）で「ワンドリンク無料！」が途中で改行されないように */
   .t-campaign__title-main { font-size: 22px; letter-spacing: .08em; padding-left: .08em; }
 }
+
+/* =========================================================
+   お支払い方法（TOP・MENU内、料金表の下）
+   ========================================================= */
+.t-payment {
+  position: relative; max-width: 720px; margin: clamp(32px, 4.5vw, 48px) auto 0;
+  padding: clamp(28px, 4vw, 38px) clamp(20px, 4vw, 44px) clamp(26px, 3.6vw, 34px);
+  text-align: center;
+  background: rgba(19, 17, 16, .9);
+  border: 1px solid var(--c-border);
+}
+.t-payment::before { content: ""; position: absolute; inset: 6px; border: 1px solid var(--c-gold-line); pointer-events: none; }
+.t-payment__icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px; border-radius: 50%;
+  background: rgba(91, 28, 38, .55); border: 1px solid rgba(201, 174, 128, .45); color: var(--c-gold);
+}
+.t-payment__title { margin-top: 14px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 4px 14px; font-weight: 400; }
+.t-payment__en { font-family: var(--f-en); font-size: clamp(20px, 2.4vw, 24px); letter-spacing: .24em; padding-left: .24em; color: var(--c-gold); }
+.t-payment__ja { font-family: var(--f-mincho); font-size: 13px; letter-spacing: .2em; color: var(--c-text-sub); }
+.t-payment__rule { display: block; width: 40px; height: 1px; margin: 16px auto 16px; background: var(--c-gold-soft); }
+.t-payment__text { font-size: 14px; line-height: 2; letter-spacing: .06em; color: var(--c-text); word-break: auto-phrase; }
+.t-payment__em { font-weight: 400; font-family: var(--f-mincho); color: var(--c-gold); letter-spacing: .12em; }
+@media (max-width: 767px) {
+  .t-payment__en { font-size: 19px; letter-spacing: .18em; padding-left: .18em; }
+  .t-payment__text { font-size: 13.5px; letter-spacing: .04em; text-align: left; }
+}
